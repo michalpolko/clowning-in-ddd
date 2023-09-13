@@ -38,14 +38,14 @@ final class Draft implements AggregateRoot
         return $aggregateRoot;
     }
 
-    public function authorUpdatesTheirDraft(Title $title, Content $content, ?Category $category): void
+    public function authorUpdatesTheirDraft(Title $title, Content $content, ?CategoryId $categoryId): void
     {
         $this->applyAndEmit(new AuthorUpdatedTheirDraft(
             $this->authorId->value,
             $this->id->value,
             $title->value,
             $content->value,
-            $category->getId()->value,
+            $categoryId->value,
         ));
     }
 

@@ -3,8 +3,8 @@
 namespace App\BlogAdmin\UserInterface\Cli\Command;
 
 use App\BlogAdmin\Application\Command\AuthorStartWritingNewDraftCommand;
-use App\BlogAdmin\Domain\Blog\Model\AuthorId;
-use App\BlogAdmin\Domain\Blog\Model\DraftId;
+use App\BlogAdmin\Domain\Blog\Model\ValueObject\AuthorId;
+use App\BlogAdmin\Domain\Blog\Model\ValueObject\DraftId;
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;

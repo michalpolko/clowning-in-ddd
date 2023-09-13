@@ -22,3 +22,7 @@ services:
 
     App\Shared\Infrastructure\Serializer\UuidNormalizer:
         tags: ['serializer.normalizer']
+
+    App\BlogAdmin\Infrastructure\Repository\Blog\DraftRepository: ~
+
+    App\BlogAdmin\Domain\Repository\Blog\DraftRepositoryInterface: '@App\BlogAdmin\Infrastructure\Repository\Blog\DraftRepository'

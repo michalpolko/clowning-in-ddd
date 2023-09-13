@@ -23,7 +23,7 @@ class AuthorUpdateDraftHandler
         $draft->authorUpdatesTheirDraft(
             $command->title,
             $command->content,
-            $command->category,
+            $command->categoryId,
         );
 
         $this->draftRepository->save($draft);

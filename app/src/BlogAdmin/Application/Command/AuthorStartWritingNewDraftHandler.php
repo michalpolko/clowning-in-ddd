@@ -2,14 +2,14 @@
 
 namespace App\BlogAdmin\Application\Command;
 
-use App\BlogAdmin\Domain\Blog\Model\Draft;
-use App\BlogAdmin\Infrastructure\Repository\Blog\DraftRepository;
+use App\BlogAdmin\Domain\Blog\Model\Entity\Draft;
+use App\BlogAdmin\Domain\Repository\Blog\DraftRepositoryInterface;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
 #[AsMessageHandler]
 class AuthorStartWritingNewDraftHandler
 {
-    public function __construct(private DraftRepository $draftRepository)
+    public function __construct(private DraftRepositoryInterface $draftRepository)
     {
     }
 
